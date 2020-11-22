@@ -1,0 +1,33 @@
+{% load static %}
+<div class="header-top">
+	 <p class="logo1">
+		<!-- 	<a href="{% url 'index' %}"><img src="{% static 'images/logo1.png' %}" width="50px" height="50px" alt=""/></a> -->
+		</p>
+       <div class="wrap">
+		<div class="cssmenu">
+
+		  <nav id="nav" role="navigation">
+			<a href="#nav" title="Show navigation">Show navigation</a>
+			<a href="#" title="Hide navigation">Hide navigation</a>
+			<ul class="clearfix">
+				<li class="active"><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'events' %}"><span>Our Events</span></a></li>
+				<li><a href="{% url 'categories' %} "><span>Categories</span></a></li>
+				<li><a href="{% url 'joinus' %}">Join Us</a></li>
+				<div class="clear"></div>
+			</ul>
+		    </nav>
+		  </div>
+		  <div class="buttons">
+				<div class="login_btn">
+					<a href="{% url 'login' %}">Login </a>
+				</div>
+				<div class="get_btn">
+					<a href="{% url 'create_event' %}">CREATE EVENT Today</a>
+				</div>
+				
+		   </div>
+	     <div class="clear"></div>
+		<h2 class="head">Find the <span class="m_1">next event </span>You'll want <span class="m_1">to attend</span></h2>
+     </div>
+    </div>

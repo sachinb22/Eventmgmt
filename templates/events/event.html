@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <div class="page-wrapper p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+               
+                <div class="card-body">
+                    
+
+        
+              <div class="blog-left">
+              <img src="{{ event.photo_1.url }}" width="1500" height="400">
+                  <p class="f-text1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+
+            <p><span class="venue"><a href="#"> Event: {{ event.title }}</a></span></p>
+            
+            <h4 class="m_2">Venue: {{ event.venue }}</h4>
+            <h4 class="m_2">Conatact Details: {{ event.phone }}</h4>
+            <h5 class="m_3">Address: {{ event.address }}</h5>
+            <h5 class="m_3">Ticket: Rs. {{ event.ticketprice }}</h5>
+          
+            </div>
+            <p ><span class="id waitingForConnection">To make participation fill the form bellow!!</span> </p>
+            
+                  <div class="comments-area">
+              <form>
+                <p>
+                  <label>Name</label>
+                  <span>*</span>
+                  <input type="text" value="">
+                </p>
+                <p>
+                  <label>Email</label>
+                  <span>*</span>
+                  <input type="text" value="">
+                </p>
+            
+                <p>
+                  
+                  <label>No. of Participants</label>
+                  <input type="text" value="" >
+                <!-- <label for="modlgn_remember" class="checkbox">Intrested<input id="modlgn_remember" type="checkbox" name="remember" class="checkbox" value="yes" autocomplete="off"></label> -->
+
+                </p>
+                
+                <p>
+                  <button class="btn btn--radius-2 btn--red" type="submit">Submit</button>
+                  
+
+              </p>
+              </form>
+              </div>
+             
+        
+        
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

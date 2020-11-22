@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="map">
+     	<img src="{% static 'images/map.jpg' %}" alt=""/>
+     </div>
+    <div class="content-box">
+     	<div class="wrap">
+     		<ul class="events">
+				<li class="active"><a href="{% url 'index' %}">Hot Events</a></li> 
+				<li><a href="{% url 'events' %}">Trending Events</a></li> 
+			</ul>
+
+			<div class="content-box-right">
+				<div class="textbox">
+					<form>
+					   <input type="text" value="Event name you want to attend" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Event name you want to attend';}">
+				    </form>
+				</div>
+		<!--         <div class="search_box">
+				  <form>
+				    <select id="country" name="country" onchange="change_country(this.value)" class="frm-field required">
+		            <option value="null">Your Location</option>         
+		            <option value="AX">Thamel</option>
+		            <option value="AF">Tripureshwor</option>
+		            <option value="AL">sanepa</option>
+		            <option value="DZ">jamshikhel</option>
+		            <option value="AS">cheetrapati</option>
+		            <option value="AD">basantapur</option>
+		          	         <option value="AX">Thamel</option>
+		            <option value="AF">Tripureshwor</option>
+		            <option value="AL">sanepa</option>
+		            <option value="DZ">jamshikhel</option>
+		            <option value="AS">cheetrapati</option>
+		            <option value="AD">basantapur</option>
+		                     <option value="AX">Thamel</option>
+		            <option value="AF">Tripureshwor</option>
+		            <option value="AL">sanepa</option>
+		            <option value="DZ">jamshikhel</option>
+		            <option value="AS">cheetrapati</option>
+		            <option value="AD">basantapur</option>
+		            
+		            
+
+		         </select>		        
+			     </form> -->
+			 <!--  </div> -->
+		<!-- 	 <div class="reservation">	
+			<form>
+				<div class="form-text">
+					<input type="date" value="Select date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Select date';}">
+				</div> -->
+				<div class="clear"></div>
+			</form>
+		   </div>
+		</div>
+     	   <div class="clear"></div>
+     	</div>
+     </div>
+<!---728x90--->
+	<div class="main">
+     	<div class="wrap">
+     		{% if events %}
+     			   {% for event in events %}
+
+     			   		<div class="section group">
+						 <div class="col_1_of_3 span_1_of_3">
+					<img src="{{ event.photo_main.url }}" alt="" width="1000px" height="225px"/>
+					<ul class="m_fb">
+						<li>
+							<span class="m_22"><a href="#"><img src="{% static 'images/fb.png' %}" alt=""/></a></span>
+						    <span class="m_23"><a href="#"><img src="{% static 'images/heart.png' %}" alt=""/></a></span>
+						     <div class="clear"></div>
+						</li>
+					</ul>
+					  <div class="desc">
+
+						<p><span class="venue"><a href="#"> Event: {{ event.title }}</a></span></p>
+						<h4 class="m_2">Venue: {{ event.venue }}</h4>
+						<h4 class="m_2">Conatact Details: {{ event.phone }}</h4>
+						<h5 class="m_3">Address: {{ event.address }}</h5>
+						
+						<p>{{ event.description }}</p>
+					   </div>
+
+						<a href="{% url 'event' event.id %}" class="backto btn-primary btn-block btn-light">More Info</a>
+					   </div>
+					   </div>
+
+     			   {% endfor %}
+     			{% else %}
+     			  <div class="col-md-12">
+     			  	<p>No Events Available</p>
+     			  </div>
+     			{% endif %}
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+				<div class="clear"></div>
+
+				</div>
+			</div>
+		</div>
+
+
+{% endblock %}
+
